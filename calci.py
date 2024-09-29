@@ -1,8 +1,8 @@
 # calculator.py
-def add(a, b):
+def adding(a, b):
     return a + b
 
-def subtract(a, b):
+def subtracting(a, b):
     return a - b
 
 def multiply(a, b):
