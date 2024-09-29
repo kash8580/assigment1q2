@@ -1,23 +1,50 @@
-# calculator.py
-def adding(a, b):
-    return a + b
+def add(x, y):
+    return x + y
 
-def subtracting(a, b):
-    return a - b
+def subtract(x, y):
+    return x - y
 
-def multiply(a, b):
-    return a * b
+def multiply(x, y):
+    return x * y
 
-def divide(a, b):
-    if b == 0:
-        return "Cannot divide by zero"
-    return a / b
+def divide(x, y):
+    if y == 0:
+        return "Error: Division by zero is not allowed."
+    return x / y
+
+def main():
+    print("Simple Calculator")
+    print("Select operation:")
+    print("1. Add")
+    print("2. Subtract")
+    print("3. Multiply")
+    print("4. Divide")
+
+    while True:
+        choice = input("Enter choice (1/2/3/4): ")
+
+        if choice in ['1', '2', '3', '4']:
+            try:
+                num1 = float(input("Enter first number: "))
+                num2 = float(input("Enter second number: "))
+            except ValueError:
+                print("Invalid input. Please enter numeric values.")
+                continue
+
+            if choice == '1':
+                print(f"{num1} + {num2} = {add(num1, num2)}")
+            elif choice == '2':
+                print(f"{num1} - {num2} = {subtract(num1, num2)}")
+            elif choice == '3':
+                print(f"{num1} * {num2} = {multiply(num1, num2)}")
+            elif choice == '4':
+                print(f"{num1} / {num2} = {divide(num1, num2)}")
+        else:
+            print("Invalid input. Please enter a number between 1 and 4.")
+
+        next_calculation = input("Do you want to perform another calculation? (yes/no): ").lower()
+        if next_calculation != 'yes':
+            break
 
 if __name__ == "__main__":
-    import sys
-    if len(sys.argv) != 4:
-        print("Usage: calculator.py <operation> <num1> <num2>")
-        sys.exit(1)
-
-    operation = sys.argv[1]
-   
+    main()
