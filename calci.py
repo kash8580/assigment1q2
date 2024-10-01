@@ -42,7 +42,7 @@ def main():
         else:
             print("Invalid input. Please enter a number between 1 and 4.")
 
-        next_calculation = input("Do you want to perform another calculation simply says yes or no? (yes/no): ").lower()
+        next_calculation = input("Do you want to perform another calculation yes or no? (yes/no): ").lower()
         if next_calculation != 'yes':
             break
 
