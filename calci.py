@@ -1,7 +1,7 @@
-def add(x, y):
+def adding(x, y):
     return x + y
 
-def subtract(x, y):
+def subtracting(x, y):
     return x - y
 
 def multiply(x, y):
@@ -32,9 +32,9 @@ def main():
                 continue
 
             if choice == '1':
-                print(f"{num1} + {num2} = {add(num1, num2)}")
+                print(f"{num1} + {num2} = {adding(num1, num2)}")
             elif choice == '2':
-                print(f"{num1} - {num2} = {subtract(num1, num2)}")
+                print(f"{num1} - {num2} = {subtracting(num1, num2)}")
             elif choice == '3':
                 print(f"{num1} * {num2} = {multiply(num1, num2)}")
             elif choice == '4':
@@ -42,7 +42,7 @@ def main():
         else:
             print("Invalid input. Please enter a number between 1 and 4.")
 
-        next_calculation = input("Do you want to perform another calculation? (yes/no): ").lower()
+        next_calculation = input("Do you want to perform another calculation simply says yes or no? (yes/no): ").lower()
         if next_calculation != 'yes':
             break
 
